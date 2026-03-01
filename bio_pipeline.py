@@ -2,12 +2,12 @@ from Bio.Seq import Seq
 from Bio.SeqUtils import gc_fraction
 
 def bio_pipeline(raw_dna):
-    # 1. THE CLEANER (From Day 4)
+    # 1. THE CLEANER 
     # Standardize and audit quality
     clean_dna = raw_dna.strip().upper().replace("N", "")
     n_count = raw_dna.strip().upper().count("N")
     
-    # 2. THE ANALYZER (From Day 5)
+    # 2. THE ANALYZER 
     # Perform biological calculations
     my_seq = Seq(clean_dna)
     gc_val = gc_fraction(my_seq) * 100
